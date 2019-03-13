@@ -320,8 +320,8 @@ void placeNewTile() {
 
 int main() {
     initializeBoard();
+		placeNewTile();
     while (getStatus() != 2) {
-        placeNewTile();
         printBoard();
         bool validMove = false;
         while (!validMove) {
@@ -346,6 +346,7 @@ int main() {
                 validMove = moveBack();
             }
         }
+				placeNewTile();
     }
     printBoard();
     cout << "Game over!";
