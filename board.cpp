@@ -1,3 +1,13 @@
+/*
+Arduino Code Draft - 3D 2048 game backend
+ENGI E1102 - Terrific Teriyaki group
+
+The following is a C++ game file for a 3D 2048 game, plus a main() tester
+function. Once we have the Arduino code written to display the game in a 3D
+lattice of multicolored LEDs, we can then modify the file to to be a header
+(*.h) and import this file into the *.ino arduino code.
+*/
+
 //#ifndef BOARD_H
 //#define BOARD_H
 
@@ -22,6 +32,12 @@ unsigned char getStatus();
 unsigned int getLargestTile();
 
 bool isCoordValid( unsigned char x, unsigned char y, unsigned char z );
+
+void initializeBoard();
+void printBoard();
+
+int rng(int upper);
+void placeNewTile();
 
 /* moveOnce
    moves a tile in a direction by a tile, and returns 1 if
