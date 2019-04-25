@@ -2,6 +2,35 @@
 
 using namespace std;
 
+uint32_t getColor(int i) {
+  switch(i) {
+    case 0:
+      return strip.Color(0, 0, 0); //off
+    case 2:
+      return strip.Color(178, 211, 252); //lavender
+    case 4:
+      return strip.Color(78, 110, 252); //royal purple
+    case 8:
+      return strip.Color(140, 255, 233); //pink
+    case 16:
+      return strip.Color(0, 201, 22); //red
+    case 32:
+      return strip.Color(160, 249, 4); //orange
+    case 64:
+      return strip.Color(250, 252, 126); //cream yellow
+    case 128:
+      return strip.Color(249, 213, 4); //chartreuse
+    case 256:
+      return strip.Color(255, 124, 112); //bright green
+    case 512:
+      return strip.Color(237, 111, 195); //turquoise
+    case 1024:
+      return strip.Color(249, 4, 205); //aqua
+    case 2048:
+      return strip.Color(217, 185, 235); //Columbia blue
+  }
+}
+
 int main() {
   unsigned int map_board[3][3][3];
   map_board[0][0][0] = 18;
